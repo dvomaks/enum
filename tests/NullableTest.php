@@ -75,6 +75,17 @@ class NullableTest extends TestCase
     /**
      * @test
      */
+    public function this_case_is_practically_the_same_as_the_one_above_zero()
+    {
+        $unknown = new NullableEnum(0);
+
+        $this->assertInstanceOf(Enum::class, $unknown);
+        $this->assertEquals(0, $unknown->value());
+    }
+
+    /**
+     * @test
+     */
     public function and_of_course_magic_constructor_works_as_well()
     {
         $unknown = NullableEnum::UNKNOWN();
