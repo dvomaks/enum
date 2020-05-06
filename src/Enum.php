@@ -56,7 +56,7 @@ abstract class Enum
         }
 
         //trick below is needed to make sure the value of original type gets set
-        $this->value = static::values()[array_search($value, static::values())];
+        $this->value = static::values()[array_search($value, static::values(), true)];
     }
 
     /**
