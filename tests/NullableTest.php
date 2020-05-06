@@ -111,8 +111,8 @@ class NullableTest extends TestCase
         $this->assertArrayHasKey(2, $choices);
 
         $this->assertEquals('', $choices['']);
-        $this->assertEquals('1', $choices[1]);
-        $this->assertEquals('2', $choices[2]);
+        $this->assertEquals('0', $choices[1]);
+        $this->assertEquals('1', $choices[2]);
     }
 
     /**
@@ -129,8 +129,8 @@ class NullableTest extends TestCase
         $this->assertArrayHasKey('COMPLETED', $array);
 
         $this->assertNull($array['UNKNOWN']);
-        $this->assertEquals(1, $array['INITIALIZED']);
-        $this->assertEquals(2, $array['COMPLETED']);
+        $this->assertEquals(0, $array['INITIALIZED']);
+        $this->assertEquals(1, $array['COMPLETED']);
 
         $this->assertIsInt($array['INITIALIZED']);
         $this->assertIsInt($array['COMPLETED']);
