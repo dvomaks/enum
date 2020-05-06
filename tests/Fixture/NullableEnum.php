@@ -16,6 +16,6 @@ use Konekt\Enum\Enum;
 class NullableEnum extends Enum
 {
     const UNKNOWN     = null;
-    const INITIALIZED = 1;
-    const COMPLETED   = 2;
+    const INITIALIZED = 0;
+    const COMPLETED   = 1;
 }
